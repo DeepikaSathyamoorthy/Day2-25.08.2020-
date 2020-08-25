@@ -1,0 +1,25 @@
+import java.util.*;
+import java.util.Scanner;
+class Venue
+{
+    String name;
+    String city;
+    void display(String name,String city)
+    {
+         System.out.println("Venue Details :");
+          System.out.println("Venue name : " + name );
+          System.out.println("City name : " + city );
+    }
+}
+class Main{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the venue name");
+    String venueName=input.nextLine();
+    System.out.println("Enter the city name");
+    String cityName=input.nextLine();
+    Venue venue=new Venue();
+    venue.display(venueName,cityName);
+    
+}
+}

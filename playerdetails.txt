@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Scanner;
+class Player
+{
+    String name;
+    String country;
+    String skill;
+}
+class Main{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the player details :");
+    String playerDetails=input.nextLine();
+    String[] words=playerDetails.split(",");  
+      System.out.println("Player details :");
+      System.out.println("Player name: "+ words[0]);
+      System.out.println("Country name: "+ words[1]);
+      System.out.println("Skills: "+ words[2]);
+      
+}  
+}

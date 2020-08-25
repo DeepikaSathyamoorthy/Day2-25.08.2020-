@@ -1,0 +1,38 @@
+import java.util.*;
+import java.util.Scanner;
+class Player
+{
+    String name;
+    String country;
+    String skill;
+    void display(String name,String country,String skill)
+    {
+         System.out.println("Player Details :");
+          System.out.println("Player name : " + name );
+          System.out.println("Country name : " + country );
+          System.out.println("Skill : " + skill );
+    }
+}
+class Simple{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the player name");
+    String playerName=input.nextLine();
+    System.out.println("Enter the country name");
+    String countryName=input.nextLine();
+    System.out.println("Enter skill");
+    String skill=input.nextLine();
+    Player player=new Player();
+    player.display(playerName,countryName,skill);
+    
+}
+}
+
+O/P
+Enter the player name dhoni
+Enter the country name india
+Enter skill all-rounder
+Player Details :
+Player name : dhoni
+Country name : india
+Skill : all-rounder

@@ -1,0 +1,76 @@
+import java.util.*;
+import java.util.Scanner;
+class Delivery
+{
+   Long over;
+   Long ball;
+   String wicketType;
+   String playerName;
+   String bowlerName;
+   void setOver(int over)
+   {
+       over=over;
+   }
+   void setBall(int ball)
+   {
+       ball=ball;
+   }
+   void setWicketType(String wicketType )
+   {
+       wicketType=wicketType;
+   }
+   void setPlayerName(String playerName )
+   {
+       playerName=playerName;
+   }
+   void setBowlerName(String bowlerName )
+   {
+       bowlerName=bowlerName;
+   }
+  
+    void displayDeliveryDetails()
+    {
+         System.out.println("Delivery details :");
+         System.out.println("Over :"+ over);
+          System.out.println("Ball :"+ ball);
+          System.out.println("Wicket Type : " + wicketType);
+          System.out.println("PlayerName : " + playerName );
+          System.out.println("BowlerName : " + bowlerName );
+    }
+}
+class Main{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the details of wicket 1");
+    String wicket1=input.nextLine();
+    System.out.println("Enter the details of wicket 2");
+    String wicket2=input.nextLine();
+    System.out.println("Enter the details of wicket 3");
+    String wicket3=input.nextLine();
+    Delivery delivery=new Delivery();
+    String word1[]=wicket1.split(",");
+    delivery.setOver(word1[0]);
+    delivery.setBall(word1[1]);
+    delivery.setWicketType(word1[2]);
+    delivery.setPlayerName(word1[3]);
+    delivery.setBowlerName(word1[4]);
+    delivery.displayDeliveryDetails();
+    
+    String word2[]=wicket2.split(",");
+    delivery.setOver(word2[0]);
+    delivery.setBall(word2[1]);
+    delivery.setWicketType(word2[2]);
+    delivery.setPlayerName(word2[3]);
+    delivery.setBowlerName(word2[4]);
+    delivery.displayDeliveryDetails();
+    
+    String word3[]=wicket3.split(",");
+    delivery.setOver(word3[0]);
+    delivery.setBall(word3[1]);
+    delivery.setWicketType(word3[2]);
+    delivery.setPlayerName(word3[3]);
+    delivery.setBowlerName(word3[4]);
+    delivery.displayDeliveryDetails();
+    
+}
+}

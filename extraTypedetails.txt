@@ -1,0 +1,19 @@
+import java.util.*;
+import java.util.Scanner;
+class Player
+{
+    String name;
+    Long runs;
+}
+class Main{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the extratype details ");
+    String extraTypeDetails=input.nextLine();
+    String[] words=extraTypeDetails.split("#");  
+      System.out.println("ExtraType Details: ");
+      System.out.println("ExtraType : "+ words[0]);
+      System.out.println("Runs: "+ words[1]);
+      
+}  
+}

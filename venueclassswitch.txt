@@ -1,0 +1,70 @@
+import java.util.*;
+import java.util.Scanner;
+class Venue
+{
+    String name;
+    String city;
+    String getName(String name)
+    {
+        return name;
+    }
+    String getCity(String city)
+    {
+        return city;
+    }
+    void setName(String name)
+    {
+        this.name=name;
+    }
+    void setCity(String city)
+    {
+        this.city=city;
+    }
+    
+    void display()
+    {
+         System.out.println("Venue Details :");
+          System.out.println("Venue name : " + name );
+          System.out.println("City name : " + city );
+    }
+}
+class Main{
+public static void main (String[] args) {
+    Scanner input=new Scanner(System.in);
+    System.out.println("Enter the venue name");
+    String venueName=input.nextLine();
+    System.out.println("Enter the city name");
+    String cityName=input.nextLine();
+    Venue venue=new Venue();
+    venue.setName(venueName);
+    venue.setCity(cityName);
+    venue.display();
+    System.out.println("Verify & update venue details");
+    System.out.println("Menu");
+    System.out.println("1.Update Venue Name\n 2.Update City Name \n3.All informations Correct/Exit \n");
+    System.out.println("Type 1 or 2 or 3");
+    int expr=input.nextInt(); 
+    switch(expr)
+    {
+        case 1:
+            System.out.println("Enter the venue name: ");
+            String name = input.nextLine();
+            venue.setName(name);
+            venue.display();
+            break;
+        case 2:
+            System.out.println("Enter the city name: ");
+            String city = input.nextLine();
+            venue.setCity(city);
+            venue.display();
+            break;
+        case 3:
+            venue.display();
+            break;
+        default :
+            System.out.println("Invalid option ");
+    }
+    
+    
+}
+}
